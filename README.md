@@ -1,1 +1,3 @@
-A Cantonese dictionary website which combines data from multiple sources.
+A Cantonese dictionary webapp which combines data from multiple sources.
+
+Active Instance: https://candict.vercel.app
