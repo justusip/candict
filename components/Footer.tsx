@@ -4,7 +4,7 @@ import React from "react";
 export default (props: {}) => <div
     className={"w-full py-8 bg-gray-200 mt-auto flex flex-col place-items-center text-xs text-neutral-500"}>
     <Wrapper>
-        <div className={"grid gap-4 grid-cols-1 md:grid-cols-3"}>
+        <div className={"grid gap-4 grid-cols-1 md:grid-cols-3 text-justify"}>
             <div>
                 本網站嘅粵語、官話詞彙定義等引用<a href={"https://words.hk/zidin/"}>《粵典》粵語辭典計劃</a>
                 同臺灣教育部嘅<a href={"https://dict.revised.moe.edu.tw/"}>重編國語辭典（修訂本）</a>資料，
