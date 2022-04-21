@@ -55,9 +55,9 @@ const Home: NextPage<{ results: any }> = ({results}) => {
                                if (e.key === "Enter")
                                    search();
                            }}/>
-                    <SearchbarButton><MdEdit/></SearchbarButton>
-                    <SearchbarButton><MdExtension/></SearchbarButton>
-                    <SearchbarButton><MdKeyboardVoice/></SearchbarButton>
+                    {/*<SearchbarButton><MdEdit/></SearchbarButton>*/}
+                    {/*<SearchbarButton><MdExtension/></SearchbarButton>*/}
+                    {/*<SearchbarButton><MdKeyboardVoice/></SearchbarButton>*/}
                     <SearchbarButton onClick={() => search()}><MdSearch/></SearchbarButton>
                 </div>
                 <div className={"mt-2 flex place-items-center text-sm"}>
@@ -68,7 +68,7 @@ const Home: NextPage<{ results: any }> = ({results}) => {
                             )
                         }
                     </div>
-                    <div className={"flex gap-4"}>
+                    <div className={"gap-4 hidden sm:flex"}>
                         {
                             ["粵拼", "耶魯", "懶人拼音"].map((o, i) =>
                                 <RomanButton selected={roman === i} onClick={() => setRoman(i)}>{o}</RomanButton>
@@ -89,7 +89,7 @@ const Home: NextPage<{ results: any }> = ({results}) => {
                                        href={`/?query=${props.children}`}>{props.children}</a>;
 
                                 if (!results)
-                                    return <div className={"text-black/70 pt-4"}>
+                                    return <div className={"text-black/70 py-4"}>
                                         粵詞林蒐集坊間唔同辭典嘅資料，能夠同時提供一個字嘅粵語解釋、官話解釋、例句、讀音同筆順等。<br/>
                                         <br/>
                                         請輸入任何單字、粵語詞語、官話詞語、成語、拼音等。例：

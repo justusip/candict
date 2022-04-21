@@ -17,17 +17,17 @@ export default (props: { entry: any }) => {
 
     const defPron = props.entry.forms && props.entry.forms.find((form: string[]) => form[0] === props.entry.title)[1];
 
-    return <div className={"flex border-b border-neutral-300 py-4"}>
+    return <div className={"grid border-b border-neutral-300 py-4 sm:grid-cols-[120px_1fr] gap-4"}>
         <div className={"w-32 text-2xl"}>
             {defPron && <div className={"text-xs text-neutral-500"}>{defPron}</div>}
-            <div className={"mb-2"}>{props.entry.title}</div>
+            <div className={"mb-2 word-breaker"}>{props.entry.title}</div>
             {
                 props.entry.forms && props.entry.forms.filter((form: string[]) => form[0] !== props.entry.title)
                     .map((form: string[]) => <div className={"text-sm text-neutral-500"}>{form[0]} <span
                         className={"text-xs"}>{form[1]}</span></div>)
             }
         </div>
-        <div className={"w-0 ml-4 flex-1"}>
+        <div>
             <a className={"flex place-items-center gap-1 cursor-pointer select-none no-underline text-black opacity-50 hover:opacity-80 transition-opacity"}
                href={source.link}>
                 <img className={"w-4 h-4"} src={source.icon}/>
