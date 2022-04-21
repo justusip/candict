@@ -15,7 +15,6 @@ export default (props: { entry: any }) => {
         }
     }[props.entry.src as string];
 
-    console.log(props.entry.forms, props.entry.title);
     const defPron = props.entry.forms && props.entry.forms.find((form: string[]) => form[0] === props.entry.title)[1];
 
     return <div className={"flex border-b border-neutral-300 py-4"}>

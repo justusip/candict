@@ -40,3 +40,4 @@ jspm_packages
 # Mac and misc
 .idea
 .DS_Store
+.env

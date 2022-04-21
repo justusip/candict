@@ -13,7 +13,6 @@ import Footer from "../components/Footer";
 import UnderConstruction from "../components/UnderConstruction";
 import Head from "next/head";
 
-
 export async function getServerSideProps(ctx: any) {
     const query = ctx.query["query"];
     const page = parseInt(ctx.query["page"] as string) || 1;
@@ -21,7 +20,7 @@ export async function getServerSideProps(ctx: any) {
     if (!query)
         return {props: {results: null}};
 
-    const res = await fetch(`http://localhost:3000/api/search?query=${query}&page=${page}`);
+    const res = await fetch(`${process.env.SERVER_URI}/api/search?query=${query}&page=${page}`);
 
     if (!res.ok)
         return;
