@@ -47,12 +47,7 @@ export default (props: {}) => <div
                 <a href={"https://home.unicode.org"}>統一碼聯盟</a>（Unicode Consortium）同字形維基營運者kamichi所擁有。
                 <br/>
                 <br/>
-                本網站字型等亦引用
-                <a href={"https://ctext.org/introduction/zh"}>中國哲學書電子化計劃</a>
-                資料，其版權歸網頁持有者所擁有。
-                <br/>
-                <br/>
-                本網站粵語讀音等亦轉載
+                本網站歷史字型等亦引用
                 <a href={"https://ctext.org/introduction/zh"}>中國哲學書電子化計劃</a>
                 資料，其版權歸網頁持有者所擁有。
             </div>
