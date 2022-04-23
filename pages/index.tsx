@@ -89,7 +89,7 @@ const Home: NextPage<{ results: any }> = ({results}) => {
                                        href={`/?query=${props.children}`}>{props.children}</a>;
 
                                 if (!results)
-                                    return <div className={"text-black/70 py-4"}>
+                                    return <div className={"text-black/70 py-4 tec"}>
                                         粵詞林蒐集坊間唔同辭典嘅資料，能夠同時提供一個字嘅粵語解釋、官話解釋、例句、讀音同筆順等。<br/>
                                         <br/>
                                         請輸入任何單字、粵語詞語、官話詞語、成語、拼音等。例：
@@ -103,7 +103,7 @@ const Home: NextPage<{ results: any }> = ({results}) => {
                                     </div>;
 
                                 if (results.results.length === 0)
-                                    return <div className={"text-black/75 pt-4"}>
+                                    return <div className={"text-black/75 py-4"}>
                                         關於你嘅查詢：<span className={"text-black"}>{results.query}</span>，我哋搵唔到任何嘅資料。<br/>
                                         請您改下關鍵字再試。
                                     </div>;
@@ -116,7 +116,7 @@ const Home: NextPage<{ results: any }> = ({results}) => {
                                     {
                                         results &&
                                         <Pagination
-                                            linkTo={(toPage: number) => `/?query=${query}&page=${toPage}`} {...results}/>
+                                            onPageChange={(toPage: number) => `/?query=${query}&page=${toPage}`} {...results}/>
                                     }
                                 </>;
                             })()

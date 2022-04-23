@@ -1,5 +1,6 @@
 import Wrapper from "./Wrapper";
 import React from "react";
+import {BsGithub} from "react-icons/bs";
 
 export default (props: {}) => <div
     className={"w-full py-8 bg-gray-200 mt-auto flex flex-col place-items-center text-xs text-neutral-500"}>
@@ -50,6 +51,12 @@ export default (props: {}) => <div
                 本網站歷史字型等亦引用
                 <a href={"https://ctext.org/introduction/zh"}>中國哲學書電子化計劃</a>
                 資料，其版權歸網頁持有者所擁有。
+                <br/>
+                <br/>
+                <div className={"flex place-items-center gap-1"}>
+                    <BsGithub/>
+                    <a href={"https://github.com/justusip/yue"}>GitHub</a>
+                </div>
             </div>
         </div>
     </Wrapper>
