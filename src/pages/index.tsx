@@ -1,10 +1,9 @@
 import {NextPage} from "next";
-import {MdEdit, MdExtension, MdKeyboardVoice, MdSearch} from "react-icons/md";
+import {MdSearch} from "react-icons/md";
 import SearchbarButton from "../components/SearchbarButton";
 import React from "react";
 import Entry from "../components/Entry";
 import Wrapper from "../components/Wrapper";
-import Link from "next/link";
 import Pagination from "../components/Pagination";
 import MenuButton from "../components/MenuButton";
 import {useRouter} from "next/router";
@@ -64,14 +63,22 @@ const Home: NextPage<{ results: any }> = ({results}) => {
                     <div className={"flex mt-2 mr-auto"}>
                         {
                             ["綜合", "漢字", "例句"].map((o, i) =>
-                                <MenuButton selected={tab === i} onClick={() => setTab(i)}>{o}</MenuButton>
+                                <MenuButton key={i}
+                                            selected={tab === i}
+                                            onClick={() => setTab(i)}>
+                                    {o}
+                                </MenuButton>
                             )
                         }
                     </div>
                     <div className={"gap-4 hidden sm:flex"}>
                         {
                             ["粵拼", "耶魯", "懶人拼音"].map((o, i) =>
-                                <RomanButton selected={roman === i} onClick={() => setRoman(i)}>{o}</RomanButton>
+                                <RomanButton key={i}
+                                             selected={roman === i}
+                                             onClick={() => setRoman(i)}>
+                                    {o}
+                                </RomanButton>
                             )
                         }
                     </div>
