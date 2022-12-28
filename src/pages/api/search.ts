@@ -1,5 +1,5 @@
 import type {NextApiRequest, NextApiResponse} from "next";
-import {useDB} from "../../misc/Database";
+import clientPromise from "../../misc/Database";
 
 export default async function handler(
     req: NextApiRequest,
@@ -9,7 +9,8 @@ export default async function handler(
     const page = parseInt(req.query["page"] as string) || 1;
     const itemsPerPage = 10;
 
-    const db = await useDB();
+    const client = await clientPromise;
+    const db = client.db("jyut")
 
     const cursor = db.collection("moedict").aggregate([
         {
